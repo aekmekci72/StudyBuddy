@@ -56,7 +56,7 @@ while True:
 
     if messages[-1]["role"] != "assistant":
         print("Assistant is thinking...")
-
+        #we can make this more specialized
         response = generate_llama2_response(user_input)
 
         full_response = ''

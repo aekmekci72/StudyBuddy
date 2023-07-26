@@ -55,7 +55,6 @@ while True:
             print("Assistant:", content)
 
     if messages[-1]["role"] != "assistant":
-        print("You:", user_input)
         print("Assistant is thinking...")
 
         response = generate_llama2_response(user_input)
@@ -63,6 +62,7 @@ while True:
         full_response = ''
         for item in response:
             full_response += item
-            print(full_response)
+        print(full_response)
+        
 
         messages.append({"role": "assistant", "content": full_response})
